@@ -3,11 +3,11 @@ package com.example.familyapp_v1;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+//@SpringBootTest
 class FamilyAppV1ApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
+   // @Test
+  //  void contextLoads() {
+   // }
 
 }
