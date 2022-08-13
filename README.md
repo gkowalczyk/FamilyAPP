@@ -12,7 +12,7 @@ Restowe API napisane w Springu z wykorzystaniem następujących technologii:
 - Lombok
 - Docker (Windows 10 Docker Desktop)
 
-## 3.Uruchomienie FamilyApp oraz FamilyMemberApp:
+## 2.Uruchomienie FamilyApp oraz FamilyMemberApp:
 
 >- docker build -t dockerfile -t "nazwa": "tag" .
 >- docker images (znajdź odpowiednie ID obrazu)
