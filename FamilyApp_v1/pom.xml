@@ -64,7 +64,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>pl.devtomek.App</mainClass>
+                            <mainClass>com.example.familyapp</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
