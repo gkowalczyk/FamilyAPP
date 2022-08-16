@@ -31,10 +31,10 @@ public class FamilyMemberAppController {
     }
 
     @PostMapping(value = "/{idMember}", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<FamilyMemberDto> createFamilyMember(@PathVariable Long idMember, @RequestBody FamilyMemberDto familyMemberDto) {
+    public ResponseEntity<Void> createFamilyMember(@PathVariable Long idMember, @RequestBody FamilyMemberDto familyMemberDto) {
         FamilyMember familyMember = familyMemberMapper.mapToFamilyMember(familyMemberDto);
         familyMember.setFamilyId(idMember);
         familyMemberService.save(familyMember);
-        return ResponseEntity.ok(familyMemberMapper.mapToFamilyMemberDto(familyMember));
+        return ResponseEntity.ok().build();
     }
 }

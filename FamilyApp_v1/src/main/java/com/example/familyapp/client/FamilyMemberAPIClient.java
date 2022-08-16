@@ -55,7 +55,7 @@ public class FamilyMemberAPIClient {
                 .iterator();
         while (familyMemberDtoIterator.hasNext()) {
             FamilyMemberDto familyMemberDto = familyMemberDtoIterator.next();
-            for (int n = 0; n <= familyDto.getFamilyMemberDtoList().size(); n++) {
+            for (int n = 0; n < familyDto.getFamilyMemberDtoList().size(); n++) {
                 restTemplate.postForObject(familyMemberAPI.getFamilyMemberApi()
                                 + id,
                         familyMemberDto,

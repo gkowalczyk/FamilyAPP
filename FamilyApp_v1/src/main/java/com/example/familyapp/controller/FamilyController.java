@@ -8,14 +8,13 @@ import com.example.familyapp.mapper.FamilyMapper;
 import com.example.familyapp.service.FamilyService;
 import com.example.familyapp.validator.AgeValidatorForFamilyControler;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import java.net.URI;
 import java.util.ArrayList;
-
+@Slf4j
 @CrossOrigin("*")
 @RestController
 @RequestMapping("/family")
@@ -44,7 +43,7 @@ public class FamilyController {
             throw new FamilyNotFoundException("Global http error handler class");
         } else {
             familyService.save(family);
-            familyMemberAPIClient.sendOfFamilyToMembers(familyMapper.mapToFamilyDto(family), familyService.getAllFamiliesSizeFromDb());
+            familyMemberAPIClient.sendOfFamilyToMembers(familyDto, familyService.getAllFamiliesSizeFromDb());
             return ResponseEntity.ok(familyService.getAllFamiliesSizeFromDb());
         }
     }
