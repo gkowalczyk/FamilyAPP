@@ -19,7 +19,7 @@ Restowe API napisane w Springu z wykorzystaniem następujących technologii:
 >- docker run -p 8081:8081 "id image" lub docker run -p 8082:8082 "id image"
 
 
-### 3 Testy Postman:
+## 3 Testy Postman:
 
 ![alt text for image](https://github.com/gkowalczyk/FamilyAPP/blob/main/GET.png)
 
